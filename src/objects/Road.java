@@ -1,29 +1,26 @@
 package objects;
 
+import java.util.Arrays;
+
 public class Road {
 	private int numbername;
-	private City Citydes;
-	private City Cityfrom;
+	/*private City Citydes;
+	private City Cityfrom;*/
+	City[] fd=new City[2];
 
 	
 
 
-	public Road(int numbername, City citydes, City cityfrom) {
+
+	public Road(int numbername, City[] fd) {
 		super();
 		this.numbername = numbername;
-		Citydes = citydes;
-		Cityfrom=cityfrom;
-		
+		this.fd = fd;
 	}
 
 
-	public Road(int numbername) {
-		super();
-		this.numbername = numbername;
-	}
-	
 
-
+/*
 	public City getCitydes() {
 		return Citydes;
 	}
@@ -42,16 +39,26 @@ public class Road {
 	public void setCityfrom(City cityfrom) {
 		Cityfrom = cityfrom;
 	}
-
+*/
 
 	public Road() {
 		// TODO Auto-generated constructor stub
 	}
 
 
+
+	
+
+
+	public Road(int numbername) {
+		super();
+		this.numbername = numbername;
+	}
+
+
 	@Override
 	public String toString() {
-		return "Road [numbername=" + numbername + ", Citydes=" + Citydes + ", Cityfrom=" + Cityfrom + "]";
+		return "Road [numbername=" + numbername + ", fd=" + Arrays.toString(fd) + "]";
 	}
 
 

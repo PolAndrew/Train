@@ -4,26 +4,41 @@ import java.util.ArrayList;
 
 public class Coutry {
 	
-	 static ArrayList<City> Country= new ArrayList<>(10);
+	 static ArrayList<City> CountryCities= new ArrayList<>(10);
 	
 	
 	static{
-		Country.add(new City("Lvov"));
-		Country.add(new City("Kiev"));
-		Country.add(new City("Lutsk"));
-		Country.add(new City("Kovel"));
-		Country.add(new City("Rovno"));
-		Country.add(new City("Odessa"));
-		Country.add(new City("Donetsk"));
-		Country.add(new City("Mariypol"));
-		Country.add(new City("Ryasne"));
-		Country.add(new City("Lukov"));
+		CountryCities.add(new City("Lvov"));
+		CountryCities.add(new City("Kiev"));
+		CountryCities.add(new City("Lutsk"));
+		CountryCities.add(new City("Kovel"));
+		CountryCities.add(new City("Rovno"));
+		CountryCities.add(new City("Odessa"));
+		CountryCities.add(new City("Donetsk"));
+		CountryCities.add(new City("Mariypol"));
+		CountryCities.add(new City("Ryasne"));
+		CountryCities.add(new City("Lukov"));
+	}
+	
+	static ArrayList<Road> countryRoads=new ArrayList<>(30);
+	
+	static{
+		for (int i = 0; i < 30; i++) {
+			countryRoads.add(new Road(i+1));
+		}
+		
+		
 	}
 
-
+	public void printRoad(){
+		for (Road road : countryRoads) {
+			System.out.println(road.getNumbername());
+		}
+		
+	}
 	
 	public void printcountry(){
-		for (City city : Country) {
+		for (City city : CountryCities) {
 			System.out.println(city.getName());
 		}
 		
