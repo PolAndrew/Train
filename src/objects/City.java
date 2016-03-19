@@ -1,7 +1,18 @@
 package objects;
 
+import java.util.ArrayList;
+
 public class City {
 	private String name;
+	static ArrayList<Road> roads;
+	
+	
+	
+
+	@Override
+	public String toString() {
+		return "City [name=" + name + "]";
+	}
 
 	public City(String name) {
 		super();

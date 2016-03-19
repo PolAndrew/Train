@@ -19,4 +19,14 @@ public class Coutry {
 		Country.add(new City("Ryasne"));
 		Country.add(new City("Lukov"));
 	}
+
+
+	
+	public void printcountry(){
+		for (City city : Country) {
+			System.out.println(city.getName());
+		}
+		
+		
+	}
 }
