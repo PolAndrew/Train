@@ -22,15 +22,15 @@ public class Coutry {
 	
 	static ArrayList<Road> countryRoads=new ArrayList<>(30);
 	
-	static{
+	/*static{
 		for (int i = 0; i < 30; i++) {
 			countryRoads.add(new Road(i+1));
 		}
 		
 		
-	}
+	}*/
 
-	public void printRoad(){
+	public void printRoads(){
 		for (Road road : countryRoads) {
 			System.out.println(road.getNumbername());
 		}
@@ -39,7 +39,7 @@ public class Coutry {
 	
 	public void printcountry(){
 		for (City city : CountryCities) {
-			System.out.println(city.getName());
+			System.out.println(city.getName()+city.getRoads());
 		}
 		
 		

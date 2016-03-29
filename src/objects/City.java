@@ -2,16 +2,31 @@ package objects;
 
 import java.util.ArrayList;
 
-public class City {
+public class City implements Comparable<City>{
 	private String name;
-	static ArrayList<Road> roads;
+	private ArrayList<Road> roads=new ArrayList<>();
 	
 	
 	
 	
+
 	
 	
+
+	public City() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public ArrayList<Road> getRoads() {
+		return roads;
+	}
+
 	
+
+	public  void setRoads(Road e) {
+		roads.add(e);
+	}
 
 	@Override
 	public String toString() {
@@ -55,6 +70,15 @@ public class City {
 			return false;
 		return true;
 	}
+
+	@Override
+	public int compareTo(City o) {
+		
+		return this.name.compareTo(o.name);
+	}
+
+	
+
 	
 	
 }

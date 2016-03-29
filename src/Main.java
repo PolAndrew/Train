@@ -9,9 +9,13 @@ public class Main {
 		
 		Coutry country=new Coutry();
 		country.printcountry();
-		/*CityMethods m=new CityMethods();
-		m.printRoads();*/
-		country.printRoad();
+		CityMethods m=new CityMethods();
+		
+		CityMethods.wr();
+		m.printRoad();
+		
+		country.printcountry();
+		
 	}
 
 }

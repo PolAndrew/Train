@@ -7,7 +7,7 @@ public class Road {
 	/*private City Citydes;
 	private City Cityfrom;*/
 	City[] fd=new City[2];
-
+	
 	
 
 
@@ -16,31 +16,10 @@ public class Road {
 		super();
 		this.numbername = numbername;
 		this.fd = fd;
+		Arrays.sort(fd);
+		
 	}
-
-
-
-/*
-	public City getCitydes() {
-		return Citydes;
-	}
-
-
-	public void setCitydes(City citydes) {
-		Citydes = citydes;
-	}
-
-
-	public City getCityfrom() {
-		return Cityfrom;
-	}
-
-
-	public void setCityfrom(City cityfrom) {
-		Cityfrom = cityfrom;
-	}
-*/
-
+	
 	public Road() {
 		// TODO Auto-generated constructor stub
 	}
@@ -66,6 +45,7 @@ public class Road {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + Arrays.hashCode(fd);
 		result = prime * result + numbername;
 		return result;
 	}
@@ -79,6 +59,8 @@ public class Road {
 		if (getClass() != obj.getClass())
 			return false;
 		Road other = (Road) obj;
+		if (!Arrays.equals(fd, other.fd))
+			return false;
 		if (numbername != other.numbername)
 			return false;
 		return true;
