@@ -18,7 +18,7 @@ public class CityMethods {
 			if (!Coutry.CountryCities.get(d).equals(Coutry.CountryCities.get(f))) 
 			{
 				Road ro= new Road(i + 1, new City[] { Coutry.CountryCities.get(d), Coutry.CountryCities.get(f) });
-				if(!Coutry.CountryCities.get(d).getRoads().contains(ro.fd)){
+				if(!Coutry.CountryCities.get(d).getRoads().contains(ro)){
 				
 				
 				c.add(ro);
@@ -48,7 +48,7 @@ public class CityMethods {
 	public static ArrayList<Road> wr(){
 		for (int i = 0; i < countryRoad.size(); i++) {
 			for (int j = i+1; j < countryRoad.size(); j++) {
-				if(countryRoad.get(i).fd.equals(countryRoad.get(j).fd)){
+				if(countryRoad.get(i).equals(countryRoad.get(j))){
 					countryRoad.clear();
 				
 					countryRoad();

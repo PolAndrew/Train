@@ -61,8 +61,7 @@ public class Road {
 		Road other = (Road) obj;
 		if (!Arrays.equals(fd, other.fd))
 			return false;
-		if (numbername != other.numbername)
-			return false;
+		
 		return true;
 	}
 
