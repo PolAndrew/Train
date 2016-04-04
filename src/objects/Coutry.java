@@ -30,14 +30,14 @@ public class Coutry {
 		
 	}*/
 
-	public void printRoads(){
+	/*public void printRoads(){
 		for (Road road : countryRoads) {
 			System.out.println(road.getNumbername());
 		}
 		
-	}
+	}*/
 	
-	public void printcountry(){
+	public static void printcountry(){
 		for (City city : CountryCities) {
 			System.out.println(city.getName()+city.getRoads());
 		}

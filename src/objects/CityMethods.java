@@ -1,6 +1,9 @@
 package objects;
 
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -75,7 +78,45 @@ public class CityMethods {
 			
 		}
 		
+		public void console(){
+			System.out.println("1- вывести список городов с перечислением дорог");
+			System.out.println("2-вывести список дорог");
+		while (true) {
+			switch (printInt()) {
+			case 1:
+				Coutry.printcountry();
+
+				break;
+			case 2:
+				printRoad();
+
+				break;
+			default:
+				break;
+			}
+		}
+			
 		
+			
+			
+			
+		}
+			
+		public static Integer printInt(){
+			BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+			int a = 0;
+			try {
+				a=Integer.parseInt(br.readLine());
+			} catch (NumberFormatException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				System.out.println("Ви ввели не число!");
+				
+			}
+			return a;
+			
+			
+		}
 	
 	
 	
